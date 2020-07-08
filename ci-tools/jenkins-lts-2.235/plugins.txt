@@ -39,7 +39,7 @@ jenkins-design-language:1.23.2
 jquery-detached:1.2.1
 jsch:0.1.55.2
 junit:1.29
-kubernetes:1.26.2
+kubernetes:1.24
 kubernetes-client-api:4.9.2-2
 kubernetes-credentials:0.7.0
 ldap:1.24
