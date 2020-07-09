@@ -1,5 +1,7 @@
 FROM alpine:3.12
 
+MAINTAINER letsmailshiv@gmail.com
+
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
 
@@ -16,4 +18,5 @@ RUN set -x  \
     bash \
 	openjdk8="$JAVA_ALPINE_VERSION" \
     krb5    \
-    openssl
+    openssl \
+    busybox-extras
