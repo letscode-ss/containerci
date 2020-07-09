@@ -3,6 +3,8 @@ FROM alpine:3.12
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
 
+MAINTAINER letsmailshiv@gmail.com
+
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
 
