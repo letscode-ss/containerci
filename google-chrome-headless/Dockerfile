@@ -21,11 +21,10 @@ RUN rm -rf /var/lib/apt/lists/* && \
   apt-get purge --auto-remove -y curl gnupg && \
   rm -rf /var/lib/apt/lists/* && \
   npm install --global lighthouse && \
-  mkdir -p /home/chrome/reports && chown -R chrome:chrome /home/chrome
+  mkdir -p /opt/chrome/reports && chmod 777 /opt/ && chown -R chrome:chrome /opt/chrome
 
 # some place we can mount and view lighthouse reports
-VOLUME /home/chrome/reports
-WORKDIR /home/chrome/reports
+WORKDIR /opt/chrome/reports
 
 COPY entrypoint.sh /usr/bin/entrypoint
 
@@ -34,7 +33,6 @@ USER chrome
 
 ENV CHROME_FLAGS="--headless --disable-gpu --no-sandbox"
 
-VOLUME /home/chrome/reports
 
 # Drop to cli
 ENTRYPOINT ["entrypoint"]
